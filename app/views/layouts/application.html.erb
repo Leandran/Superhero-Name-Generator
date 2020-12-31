@@ -7,11 +7,18 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!--To make the app responsive on mobile-->
   </head>
 
   <body>
   <%= render 'home/navbar' %>
-
+   <div class="container">
     <%= yield %>
+  </div>
+  <br/> <br/>
+   <br/> <br/>
+   <center>
+    <p>Copyright &copy; 2020 LM - All rights reserved</p>
+   </center>
   </body>
 </html>
