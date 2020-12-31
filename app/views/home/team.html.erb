@@ -1,3 +1,28 @@
-<h1>Create A Team</h1>
-<br/><br/><br/><br/><br/><br/><br/>
-<p>Let's Go</p>
+<br/>
+
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title dark"><% if @team_number > 0 %>Your Superhero Team... <% else %>How Many Team Members Do You Want ? <% end %></h3>
+  </div>
+  <div class="panel-body">
+ 
+ <% if @team_number > 0 %>
+   <%= render 'home/show'  %>.
+<% else %>
+  <%= render 'home/create_team'  %>
+<% end %>
+
+  
+
+
+  
+
+
+
+</div>
+</div>
+
+  
+  

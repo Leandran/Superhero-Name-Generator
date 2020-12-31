@@ -1,0 +1,75 @@
+<% @team_number.times do %>
+
+<div class="row">
+  		<br/> 
+  		<div class="col-md-4">
+  	
+    <% random_number = rand(1..1000) %>
+    <% set_num = rand(1..3) %>
+    <% background = rand(1..2) %>
+
+      <% if set_num == 1 %>
+        <% set = "set1" %>
+    <% elsif set_num == 2 %>
+       <% set = "set2" %>
+    <% else set_num == 3 %>
+       <% set = "set3" %>
+    
+    <% end %>
+
+    
+    <% if background == 1 %>
+     <%  bg = "bg1" %>
+    <% else %>
+      <% bg = "bg2" %>
+    
+    <% end %>
+
+
+
+
+    <% avatar = Faker::Avatar.image(slug: random_number , size: "300x300", format: "bmp", set: set, bgset: bg) %>
+
+ 
+
+        <img src="<%= avatar %>">
+  		</div>
+        
+    <div class="col-md-4">
+      <h3>
+    Super Hero Name:<br/>
+    <span class="red"><%= Faker::Superhero.name %></span><br/><br/><br/>
+    </h3>
+
+    <h3>
+    Power:<br/> 
+    <span class="red"><%= Faker::Superhero.power %></span>  <br/><br/> 
+    </h3>
+
+    <h3>
+    Favourite Food:<br/>
+    <span class="red"><%=  Faker::Food.dish  %></span><br/><br/> 
+    </h3>
+
+    <h4> 
+    Your Undercover Day Job is:<br/> <%=  Faker::Job.title %><br/><br/>  
+    Your Corporate Superpower is:<br/> <%=  Faker::Company.bs.titleize  %><br/><br/>
+   </h4>
+   </div>
+
+   
+   <div class="col-md-4">
+  </div>
+   
+   <div class="row">
+    <div class="col-md-12">
+      <hr>
+  </div>
+  
+  </div>
+     
+</div>
+
+<% end %>
+<div class="panel-footer"><%= link_to 'Create Your Superhero', root_path %>
+  </div>

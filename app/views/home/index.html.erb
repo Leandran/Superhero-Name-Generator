@@ -1,18 +1,41 @@
+<br/> 
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title"><%= link_to 'Click Here To Create New A Superhero', root_path %></h3>
+    <h3 class="panel-title dark"><%= link_to 'Click Here To Create New A Superhero', root_path %></h3>
   </div>
   <div class="panel-body">
-    Super Hero Name:<br/> <%= @hero_name %> <br/><br/>
-    Power:<br/> <%= @power %><br/><br/>
-    Favourite Food:<br/> <%=  @food %><br/><br/>
-    Your Undercover Day Job is:<br/> <%=  @job %><br/><br/>
+  	<div class="row">
+  		<br/> 
+  		<div class="col-md-4">
+  			<img src="<%= @avatar %>">
+  		</div>
+        <div class="col-md-4">
+    
+    <h3>
+    Super Hero Name:<br/>
+    <span class="red"><%= @hero_name %></span><br/><br/><br/>
+    </h3>
+
+    <h3>
+    Power:<br/> 
+    <span class="red"><%= @power %></span>  <br/><br/> 
+    </h3>
+
+    <h3>
+    Favourite Food:<br/>
+    <span class="red"><%=  @food %></span><br/><br/> 
+    </h3>
+
+    <h4> 
+    Your Undercover Day Job is:<br/> <%=  @job %><br/><br/>  
     Your Corporate Superpower is:<br/> <%=  @job_power %><br/><br/>
-   <br/><br/>
-   <img src="<%= @avatar %>">
-   
+   </h4>
+   </div>
+   </div>
+   </div>
+  
+  <div class="panel-footer"><%= link_to 'Create A Whole Superhero Team', home_team_path %>
   </div>
-  <div class="panel-footer"><%= link_to 'Create A Whole Superhero Team', home_team_path %></div>
 </div>
 
 

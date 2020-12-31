@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  before_action :common, :only => [:index, :item]
+  before_action :common, :only => [:index, :item, :team]
 
   def common
     @hero_name = Faker::Superhero.name #able to access this instance variable through the methods
@@ -14,10 +14,10 @@ class HomeController < ApplicationController
 
     if @set_num == 1
     	@set = "set1"
-    elsif @rand_num == 2
+    elsif @set_num == 2
     	@set = "set2"
-    else @rand_num == 3
-    	@set = "set3"
+    else 
+      @set = "set3"
     
     end
 
@@ -40,6 +40,7 @@ class HomeController < ApplicationController
   end
 
   def team
+    @team_number = params[:team_number].to_i
   end
 
 end
