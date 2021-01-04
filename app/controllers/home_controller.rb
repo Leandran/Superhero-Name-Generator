@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  before_action :common, :only => [:index, :item, :team]
+  before_action :common, :only => [:index,:team]
 
   def common
     @hero_name = Faker::Superhero.name #able to access this instance variable through the methods
